@@ -17,6 +17,7 @@
   <p>{{car.name}}</p>
 
   <ul>
+    {{!-- using a regular ember computed property here has the same result --}}
     {{#each (sort-by 'name' car.drivers) as |driver|}}
       <li>{{driver.name}} (id: {{driver.id}})</li>
     {{else}}
